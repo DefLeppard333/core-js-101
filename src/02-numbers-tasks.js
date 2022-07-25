@@ -1,4 +1,4 @@
-/*  eslint linebreak-style: ["error", "windows"]  */
+/* eslint-disable linebreak-style */
 /**
  * Returns an area of a rectangle given by width and height.
  *
