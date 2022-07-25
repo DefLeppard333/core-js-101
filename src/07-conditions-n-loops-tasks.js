@@ -1,3 +1,4 @@
+/*  eslint linebreak-style: ["error", "windows"]  */
 /* *************************************************************************************************
  *                                                                                                *
  * Please read the following tutorial before implementing tasks:                                   *
@@ -134,10 +135,10 @@ function doRectanglesOverlap(rect1, rect2) {
     rect2Copy = tmp;
   }
 
-  return (rect1Copy.top <= rect2Copy.top) &&
-    (rect1Copy.top + rect1Copy.width >= rect2Copy.top) &&
-    (rect1Copy.left <= rect2Copy.left) &&
-    (rect1Copy.left + rect1Copy.height >= rect2Copy.left);
+  return (rect1Copy.top <= rect2Copy.top)
+    && (rect1Copy.top + rect1Copy.width >= rect2Copy.top)
+    && (rect1Copy.left <= rect2Copy.left)
+    && (rect1Copy.left + rect1Copy.height >= rect2Copy.left);
 }
 
 
@@ -522,22 +523,22 @@ function getMatrixProduct(m1, m2) {
  */
 function evaluateTicTacToePosition(position) {
   let winner;
-  if ((position[0][0] === position[0][1]) &&
-    (position[0][0] === position[0][2]))[[winner]] = position;
-  if ((position[1][0] === position[1][1]) &&
-    (position[1][0] === position[1][2]))[, [winner]] = position;
-  if ((position[2][0] === position[2][1]) &&
-    (position[2][0] === position[2][2]))[, , [winner]] = position;
-  if ((position[0][0] === position[1][0]) &&
-    (position[0][0] === position[2][0]))[[winner]] = position;
-  if ((position[0][1] === position[1][1]) &&
-    (position[0][1] === position[2][1]))[[, winner]] = position;
-  if ((position[0][2] === position[1][2]) &&
-    (position[0][2] === position[2][2]))[[, , winner]] = position;
-  if ((position[0][0] === position[1][1]) &&
-    (position[0][0] === position[2][2]))[[winner]] = position;
-  if ((position[2][0] === position[1][1]) &&
-    (position[2][0] === position[0][2]))[, , [winner]] = position;
+  if ((position[0][0] === position[0][1])
+     && (position[0][0] === position[0][2]))[[winner]] = position;
+  if ((position[1][0] === position[1][1])
+     && (position[1][0] === position[1][2]))[, [winner]] = position;
+  if ((position[2][0] === position[2][1])
+     && (position[2][0] === position[2][2]))[, , [winner]] = position;
+  if ((position[0][0] === position[1][0])
+     && (position[0][0] === position[2][0]))[[winner]] = position;
+  if ((position[0][1] === position[1][1])
+     && (position[0][1] === position[2][1]))[[, winner]] = position;
+  if ((position[0][2] === position[1][2])
+     && (position[0][2] === position[2][2]))[[, , winner]] = position;
+  if ((position[0][0] === position[1][1])
+     && (position[0][0] === position[2][2]))[[winner]] = position;
+  if ((position[2][0] === position[1][1])
+     && (position[2][0] === position[0][2]))[, , [winner]] = position;
   return winner;
 }
 

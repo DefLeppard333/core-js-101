@@ -1,3 +1,4 @@
+/*  eslint linebreak-style: ["error", "windows"]  */
 /* ********************************************************************************************
  *                                                                                            *
  * Please read the following tutorial before implementing tasks:                               *
@@ -20,7 +21,7 @@
  *    ['Array', 'Number', 'string'], 'Date'    => -1
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
- function findElement(arr, value) {
+function findElement(arr, value) {
   return arr.indexOf(value);
 }
 
