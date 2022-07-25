@@ -30,16 +30,14 @@
  *                                                    //  Ask her again.';
  */
 function willYouMarryMe(isPositiveAnswer) {
-  return new Promise((resolve, reject) => {
+  return new Promise((res, rej) => {
     if (isPositiveAnswer === true) {
-      resolve('Hooray!!! She said "Yes"!');
+      res('Hooray!!! She said "Yes"!');
+    } else if (isPositiveAnswer === false) {
+      res('Oh no, she said "No".');
+    } else if (isPositiveAnswer === undefined) {
+      rej(new Error('Wrong parameter is passed! Ask her again.'));
     }
-
-    if (isPositiveAnswer === false) {
-      resolve('Oh no, she said "No".');
-    }
-
-    reject(Error('Wrong parameter is passed! Ask her again.'));
   });
 }
 
@@ -103,11 +101,8 @@ function getFastestPromise(array) {
  *    });
  *
  */
-async function chainPromises(array, action) {
-  const results = [];
-  await array.forEach((promise) => promise.then((result) => results.push(result))
-    .catch((err) => new Error(err)));
-  return results.reduce(action);
+function chainPromises(/* array, action */) {
+  throw new Error('Not implemented');
 }
 
 module.exports = {
